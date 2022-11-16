@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "mon_projet_3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "jad saleh",
+  "license": "MIT",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "sass": "^1.56.1"
+  }
+}

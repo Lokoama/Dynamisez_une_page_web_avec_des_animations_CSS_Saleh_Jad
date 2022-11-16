@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+h2, p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 95%;
+  margin: auto;
+}
+
+#container2 {
+  border: solid black;
+  display: grid;
+  grid-template-rows: 5% 60% 35%;
+  grid-template-areas: "a" "b" "c";
+}
+
+header {
+  background-color: red;
+  grid-area: a;
+}
+
+main {
+  grid-area: b;
+  background-color: blue;
+}
+
+article.bloc1 {
+  background-color: green;
+}
+
+aside {
+  background-color: cyan;
+}
+
+article.bloc2 {
+  background-color: gold;
+}
+
+.bloc3 {
+  background-color: darkblue;
+}
+
+footer.footer {
+  background-color: aqua;
+  grid-area: c;
+}
+
+#container1 {
+  z-index: 1;
+  height: 100vh;
+  position: absolute;
+}
+#container1 section.bloc1 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+#container1 section.bloc1 .spinner {
+  color: #9356DC;
+  display: block;
+  position: absolute;
+  margin: auto;
+}
+#container1 section.bloc1 .spinner div {
+  transform-origin: 40px 40px;
+  /* animation: spinner 2.2s linear infinite;*/
+}
+#container1 section.bloc1 .spinner div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 17px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: red;
+}
+#container1 section.bloc1 .spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -2.2s;
+}
+#container1 section.bloc1 .spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -2s;
+}
+#container1 section.bloc1 .spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -1.8s;
+}
+#container1 section.bloc1 .spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -1.6s;
+}
+#container1 section.bloc1 .spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -1.4s;
+}
+#container1 section.bloc1 .spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -1.2s;
+}
+#container1 section.bloc1 .spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -1s;
+}
+#container1 section.bloc1 .spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.8s;
+}
+#container1 section.bloc1 .spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.6s;
+}
+#container1 section.bloc1 .spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.4s;
+}
+#container1 section.bloc1 .spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.2s;
+}
+#container1 section.bloc1 .spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#container2 {
+  position: relative;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

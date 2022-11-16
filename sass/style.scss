@@ -1,0 +1,81 @@
+@import "./utils/variables";
+@import "./utils/fonctions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./base/base";
+@import "./base/typography";
+@import "./composants/bouttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";
+
+h2,p {
+    padding: 0;
+    margin: 0;
+}
+body {
+    max-width: 95%;
+    margin: auto;
+}
+
+#container2 {
+    border:solid black ;
+    display: grid;
+    grid-template-rows: 5% 60% 35%;
+    grid-template-areas: "a" 
+    "b" 
+    "c";
+}
+
+header {
+    background-color: red;
+    grid-area: a;
+}
+
+main {
+    grid-area: b;
+    background-color: blue;
+}
+
+article.bloc1 {
+    background-color: green;
+}
+
+aside {
+    background-color: cyan;
+}
+
+article.bloc2 {
+    background-color: gold;
+}
+
+.bloc3 {
+    background-color:darkblue;
+}
+
+footer.footer {
+    background-color: aqua;
+    grid-area: c;
+}
+
+#container1 {
+    z-index: 1;
+    height: 100vh;
+    position: absolute;
+    section.bloc1 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+            @include loading;
+        
+    }
+}
+
+#container2 {
+    position: relative;
+    height: 100vh;
+}
