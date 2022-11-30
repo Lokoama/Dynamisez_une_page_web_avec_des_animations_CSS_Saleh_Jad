@@ -30,6 +30,8 @@ body {
     grid-template-areas: "a" 
     "b" 
     "c";
+    position: relative;
+    height: 130vh;
 }
 
 header {
@@ -108,8 +110,5 @@ footer.footer {
     }
 }*/
 
-#container2 {
-    position: relative;
-    height: 100vh;
-}
+
 

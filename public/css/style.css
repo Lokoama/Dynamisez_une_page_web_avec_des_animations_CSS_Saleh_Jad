@@ -16,6 +16,8 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: "a" "b" "c";
+  position: relative;
+  height: 130vh;
 }
 
 header {
@@ -94,9 +96,5 @@ footer.footer {
 
     }
 }*/
-#container2 {
-  position: relative;
-  height: 100vh;
-}
 
 /*# sourceMappingURL=style.css.map */
