@@ -1,3 +1,4 @@
+
 @mixin loading {
     .spinner {
         color: $color-primary;
@@ -7,7 +8,7 @@
       }
       .spinner div {
         transform-origin: 40px 40px;
-       /* animation: spinner 2.2s linear infinite;*/
+        animation: spinner 2.2s linear infinite;
       }
       .spinner div:after {
         content: "";
@@ -78,4 +79,4 @@
       }
       
       
-}
+} 

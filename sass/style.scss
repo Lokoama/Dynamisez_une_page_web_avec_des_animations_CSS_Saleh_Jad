@@ -23,9 +23,10 @@ body {
 }
 
 #container2 {
-    border:solid black ;
+    border:solid $color-primary ;
     display: grid;
-    grid-template-rows: 5% 60% 35%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
     grid-template-areas: "a" 
     "b" 
     "c";
@@ -34,11 +35,42 @@ body {
 header {
     background-color: red;
     grid-area: a;
+    .header_content {
+        & img {
+            width: 150px;
+            height: auto;  
+            display: block;
+            margin: auto;
+        }
+    }
 }
 
 main {
     grid-area: b;
     background-color: blue;
+    div.location {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: grey; 
+        box-shadow: 3px -8px 10px -1px #000000;
+    }
+    div.reservation {
+        
+        display: flex;
+        flex-direction: column;
+        margin-left: 7%;
+        margin-right: 7%;
+        text-align: center;
+        &_btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            button {
+                @include button;
+            }
+        }
+    }
 }
 
 article.bloc1 {
@@ -62,6 +94,7 @@ footer.footer {
     grid-area: c;
 }
 
+/*
 #container1 {
     z-index: 1;
     height: 100vh;
@@ -73,9 +106,10 @@ footer.footer {
             @include loading;
         
     }
-}
+}*/
 
 #container2 {
     position: relative;
     height: 100vh;
 }
+
