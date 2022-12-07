@@ -13,7 +13,7 @@
 @import "./pages/about";
 @import "./pages/project";
 
-h2,p {
+h2,h3,p {
     padding: 0;
     margin: 0;
 }
@@ -26,18 +26,21 @@ body {
     border:solid $color-primary ;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 0.3fr 5fr 1fr;
     grid-template-areas: "a" 
     "b" 
     "c";
     position: relative;
-    height: 130vh;
+    height: 300vh;
 }
 
 header {
     background-color: red;
     grid-area: a;
+    display: flex;
+    justify-content: center;
     .header_content {
+        display: flex;
         & img {
             width: 150px;
             height: auto;  
@@ -81,6 +84,33 @@ article.bloc1 {
 
 aside {
     background-color: cyan;
+    h2 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .aside_1, .aside_2, .aside_3 {
+        display: flex;
+        border-radius: 30px;
+        padding: 15px;
+        margin: 10px;
+        background-color: grey;
+        .number {
+            border-radius: 50px;
+            padding: 10px;
+            background-color: $color-primary;
+            color: white;
+            position: absolute;
+            left: 0px;
+        }
+        .aside_text, i  {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        i {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
 }
 
 article.bloc2 {
@@ -89,6 +119,19 @@ article.bloc2 {
 
 .bloc3 {
     background-color:darkblue;
+    padding-top: 40px;
+    .card {
+        background-color: white;
+        img {
+            width: 90%;
+            height: 200px;
+            object-fit: cover;
+        }
+        &_nouveau {
+            background-color: teal;
+            width: 70px;
+        }
+    }
 }
 
 footer.footer {
