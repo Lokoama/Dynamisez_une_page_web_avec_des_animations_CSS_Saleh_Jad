@@ -39,7 +39,7 @@ body {
     "b"
     "c";
   position: relative;
-  height: 300vh;
+  height: 260vh;
 }
 
 header {
@@ -117,8 +117,31 @@ aside {
     i {
       margin-top: auto;
       margin-bottom: auto;
+    }
+    i {
       padding-left: 10px;
       padding-right: 10px;
+    }
+    .fa-heart {
+      margin-top: 25px;
+      margin-right: 20px;
+      z-index: 1;
+      position: relative;
+    }
+    .fa-heart:hover::after {
+      /*animation coeur*/
+      transform: scale(1.5);
+    }
+    .fa-heart::after {
+      content: "";
+      top: 0;
+      width: 0;
+      bottom: 0;
+      height: 0;
+      position: absolute;
+      z-index: -1;
+      background-color: transparent;
+      background-image: linear-gradient(auto, $color-primary);
     }
   }
 }
@@ -145,55 +168,48 @@ article.bloc2 {
       p {
         text-align: center;
       }
-    }
+    }/*
+    &_txt {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &_icone {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-right: 10%;
+        font-size: 20px;
+      
+        &:active {
+          color: black;
+        }
+        &::after {
+          color: black;
+        }
+      }
+    }*/
+
+    /*
+    i.fa-heart {
+      color: black;
+      border-radius: 50%;
+      padding: 0.2em;
+      i.fa-heart:hover::before {
+        transition: ease 2sec;
+        background-color: radial-gradient(blue, red);
+        cursor: pointer;
+        i.fa-heart i::before {
+          content: "\f004";
+          font-weight: bold;
+          transition: color 1s ease-out;
+        }
+      }
+    }*/
+
     img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 10px 10px 0 0;
-    }
-  }
-}
-
-.card_txt {
-  position: relative;
-  margin-bottom: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  justify-content: space-between;
-
-  .card_txt_icone {
-    position: relative;
-    align-items: center;
-    padding-right: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-    i {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      font-size: larger;
-    }
-
-    .icon-default {
-      transition: opacity 0.5s, transform 0.5s;
-    }
-
-    .icon-hover {
-      transition: opacity 0.5s, transform 0.5s;
-      opacity: 0;
-    }
-  }
-
-  &:hover {
-    .icon-hover {
-      transform:scale(1);
-      opacity: 1;
-    }
-    .icon-default {
-      opacity: 0;
     }
   }
 }
