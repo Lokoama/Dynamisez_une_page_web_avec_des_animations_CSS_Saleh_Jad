@@ -35,7 +35,13 @@ div.card_page {
   border-radius: 10px;
   padding: 5px;
   background-color: lightgrey;
+  width: 100%;
   justify-content: space-between;
+}
+div.card_page:hover .animation_page {
+  width: 100px;
+  opacity: 1;
+  background-color: red;
 }
 
 div.card_txt_page {
@@ -56,7 +62,7 @@ div.command_btn button {
 }
 .animation_page {
   background-color: green;
-  display: none;
+  width: 0;
 }
 
 #container2 {

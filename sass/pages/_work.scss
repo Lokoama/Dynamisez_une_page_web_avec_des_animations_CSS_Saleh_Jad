@@ -15,7 +15,13 @@ div.title_page {
 
 div.card_page {
     @include card_dimension;
+    width: 100%;
     justify-content: space-between;
+    &:hover .animation_page{
+        width: 100px;
+        opacity: 1;
+        background-color: red;
+    }
 }
 div.card_txt_page {
     display: flex;
@@ -37,5 +43,5 @@ div.command_btn {
 
 .animation_page {
     background-color: green;
-    display: none;
+    width: 0;
 }
