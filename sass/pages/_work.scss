@@ -1,0 +1,41 @@
+
+img.img_page {
+    height: 200px;
+    width: 100%;
+    object-fit: content;
+  }
+div.title_page {
+    display: flex;
+    justify-content: space-between;
+    i {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+div.card_page {
+    @include card_dimension;
+    justify-content: space-between;
+}
+div.card_txt_page {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.command_btn {
+    button{
+        @include button
+    }
+}
+
+.card_content {
+    width: 100%;
+    &:hover {
+        
+    }
+}
+
+.animation_page {
+    background-color: green;
+    display: none;
+}

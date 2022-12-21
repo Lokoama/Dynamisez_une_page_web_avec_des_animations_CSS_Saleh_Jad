@@ -1,0 +1,15 @@
+@mixin header {
+  header {
+    background-color: red;
+    grid-area: bloc-header;
+    .header_content {
+      display: flex;
+      & img {
+        width: 150px;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+} 

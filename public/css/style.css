@@ -16,21 +16,62 @@ body {
   margin: auto;
 }
 
+img.img_page {
+  height: 200px;
+  width: 100%;
+  object-fit: content;
+}
+
+div.title_page {
+  display: flex;
+  justify-content: space-between;
+}
+div.title_page i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div.card_page {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: lightgrey;
+  justify-content: space-between;
+}
+
+div.card_txt_page {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.command_btn button {
+  background: #FF79DA;
+  border-radius: 30px;
+  color: #fff;
+  padding: 15px 20px 14px;
+  text-decoration: none;
+}
+
+.card_content {
+  width: 100%;
+}
+.animation_page {
+  background-color: green;
+  display: none;
+}
+
 #container2 {
   border: solid #9356DC;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3% 90% 7%;
-  grid-template-areas: "a" "b" "c";
+  grid-template-rows: 1fr 15fr 2fr;
+  grid-template-areas: "bloc-header" "bloc-main" "bloc-footer";
   position: relative;
-  height: 300vh;
+  height: fit-content;
 }
 
 header {
   background-color: red;
-  grid-area: a;
-  display: flex;
-  justify-content: center;
+  grid-area: bloc-header;
 }
 header .header_content {
   display: flex;
@@ -43,7 +84,7 @@ header .header_content img {
 }
 
 main {
-  grid-area: b;
+  grid-area: bloc-main;
   background-color: blue;
 }
 main div.location {
@@ -119,10 +160,10 @@ article.bloc2 {
   padding-top: 40px;
 }
 .bloc3 .card {
-  background-color: lightgrey;
   position: relative;
   border-radius: 10px;
   padding: 5px;
+  background-color: lightgrey;
   margin: 10px 0;
 }
 .bloc3 .card_nouveau {
@@ -181,18 +222,19 @@ article.bloc2 {
 
 footer.footer {
   background-color: aqua;
-  grid-area: c;
+  grid-area: bloc-footer;
 }
-footer.footer a {
+
+div.link a {
   display: flex;
   flex-direction: row;
 }
-footer.footer a i {
+div.link a i {
   margin-right: 8px;
   width: 20px;
 }
 
-/*
+/* animation spinner
 #container1 {
     z-index: 1;
     height: 100vh;

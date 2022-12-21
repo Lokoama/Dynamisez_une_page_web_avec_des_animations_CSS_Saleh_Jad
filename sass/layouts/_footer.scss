@@ -1,0 +1,14 @@
+@mixin footer {
+  footer.footer {
+    background-color: aqua;
+    grid-area: bloc-footer;
+  }
+  div.link a {
+    display: flex;
+    flex-direction: row;
+    i {
+      margin-right: 8px;
+      width: 20px;
+    }
+  }
+}
