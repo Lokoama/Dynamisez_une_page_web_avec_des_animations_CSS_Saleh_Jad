@@ -1,14 +1,17 @@
-
 @mixin loading {
     .spinner {
         color: $color-primary;
-        display: block;
         position: absolute;
         margin: auto;
+        
       }
       .spinner div {
         transform-origin: 40px 40px;
-        animation: spinner 2.2s linear infinite;
+        animation-duration: 2.2s;
+        animation-name: spinner;
+        animation-iteration-count: infinite;
+        animation-direction: linear;
+        
       }
       .spinner div:after {
         content: "";
@@ -18,8 +21,9 @@
         left: 17px;
         width: 6px;
         height: 18px;
-        border-radius:20%;
-        background: red;
+        border-radius:25%;
+        background: $color-primary;
+        animation: 5ms disapear;
       }
       .spinner div:nth-child(1) {
         transform: rotate(0deg);
@@ -69,18 +73,25 @@
         transform: rotate(330deg);
         animation-delay: 0s;
       }
+      
       @keyframes spinner {
-        0% {
-          opacity: 1;
-        }
         100% {
           opacity: 0;
         }
       } 
 } 
 
+    @keyframes disapear {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
 @mixin card_dimension {
   border-radius: 10px;
-  padding: 5px;
   background-color: lightgrey;
 }
+

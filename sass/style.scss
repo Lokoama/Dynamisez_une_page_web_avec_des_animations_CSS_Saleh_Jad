@@ -13,7 +13,21 @@
 @import "./pages/about";
 @import "./pages/project";
 
-
+/* animation spinner*/
+#container1 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  animation: 5ms disapear;
+  section.bloc1 {
+      position: relative;
+      top: 50%;
+      left: 50%;
+          @include loading;
+  }
+}
 
 #container2 {
   border: solid $color-primary;
@@ -25,7 +39,10 @@
     "bloc-main"
     "bloc-footer";
   position: relative;
-  height: fit-content;
+  height: 180vh;
+  z-index: 1;
+  animation: 2.6s appear;
+
 }
 
 @include header;
@@ -34,20 +51,16 @@
 
 @include footer;
 
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
 
+  90%{
+    opacity: 0;
+  }
 
-
-
-/* animation spinner
-#container1 {
-    z-index: 1;
-    height: 100vh;
-    position: absolute;
-    section.bloc1 {
-        position: relative;
-        top: 50%;
-        left: 50%;
-            @include loading;
-        
-    }
-}*/
+  100% {
+    opacity: 1;
+  }
+}

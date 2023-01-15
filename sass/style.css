@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@keyframes disapear {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 h2,
 h3,
 p {
@@ -27,7 +19,8 @@ body {
 img.img_page {
   height: 200px;
   width: 100%;
-  object-fit: content;
+  -o-object-fit: content;
+     object-fit: content;
 }
 
 div.title_page {
@@ -74,12 +67,12 @@ div.command_btn button {
 
 /* animation spinner*/
 #container1 {
+  z-index: 2;
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   bottom: 0;
-  animation: 5ms disapear;
 }
 #container1 section.bloc1 {
   position: relative;
@@ -93,10 +86,14 @@ div.command_btn button {
 }
 #container1 section.bloc1 .spinner div {
   transform-origin: 40px 40px;
-  animation-duration: 2.2s;
-  animation-name: spinner;
-  animation-iteration-count: infinite;
-  animation-direction: linear;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-name: spinner;
+          animation-name: spinner;
+  -webkit-animation-iteration-count: 3ms;
+          animation-iteration-count: 3ms;
+  -webkit-animation-direction: linear;
+          animation-direction: linear;
 }
 #container1 section.bloc1 .spinner div:after {
   content: "";
@@ -108,59 +105,85 @@ div.command_btn button {
   height: 18px;
   border-radius: 25%;
   background: #9356DC;
-  animation: 5ms disapear;
 }
 #container1 section.bloc1 .spinner div:nth-child(1) {
   transform: rotate(0deg);
-  animation-delay: -2.2s;
+  -webkit-animation-delay: -2.2s;
+          animation-delay: -2.2s;
 }
 #container1 section.bloc1 .spinner div:nth-child(2) {
   transform: rotate(30deg);
-  animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
 }
 #container1 section.bloc1 .spinner div:nth-child(3) {
   transform: rotate(60deg);
-  animation-delay: -1.8s;
+  -webkit-animation-delay: -1.8s;
+          animation-delay: -1.8s;
 }
 #container1 section.bloc1 .spinner div:nth-child(4) {
   transform: rotate(90deg);
-  animation-delay: -1.6s;
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
 }
 #container1 section.bloc1 .spinner div:nth-child(5) {
   transform: rotate(120deg);
-  animation-delay: -1.4s;
+  -webkit-animation-delay: -1.4s;
+          animation-delay: -1.4s;
 }
 #container1 section.bloc1 .spinner div:nth-child(6) {
   transform: rotate(150deg);
-  animation-delay: -1.2s;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
 }
 #container1 section.bloc1 .spinner div:nth-child(7) {
   transform: rotate(180deg);
-  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
 }
 #container1 section.bloc1 .spinner div:nth-child(8) {
   transform: rotate(210deg);
-  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
 }
 #container1 section.bloc1 .spinner div:nth-child(9) {
   transform: rotate(240deg);
-  animation-delay: -0.6s;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
 }
 #container1 section.bloc1 .spinner div:nth-child(10) {
   transform: rotate(270deg);
-  animation-delay: -0.4s;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
 }
 #container1 section.bloc1 .spinner div:nth-child(11) {
   transform: rotate(300deg);
-  animation-delay: -0.2s;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
 }
 #container1 section.bloc1 .spinner div:nth-child(12) {
   transform: rotate(330deg);
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+@-webkit-keyframes spinner {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
 }
 @keyframes spinner {
-  100% {
+  0% {
     opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: hidden;
   }
 }
 
@@ -173,7 +196,6 @@ div.command_btn button {
   position: relative;
   height: 180vh;
   z-index: 1;
-  animation: 2.6s appear;
 }
 
 header {
@@ -285,7 +307,8 @@ article.bloc2 {
 .bloc3 .card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
@@ -338,18 +361,4 @@ div.link a {
 div.link a i {
   margin-right: 8px;
   width: 20px;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
