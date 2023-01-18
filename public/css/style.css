@@ -173,9 +173,20 @@ div.command_btn button {
   position: relative;
   height: 180vh;
   z-index: 1;
-  animation: 2.6s appear;
+  animation: 2s appear;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   background-color: red;
   grid-area: bloc-header;
@@ -338,18 +349,6 @@ div.link a {
 div.link a i {
   margin-right: 8px;
   width: 20px;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

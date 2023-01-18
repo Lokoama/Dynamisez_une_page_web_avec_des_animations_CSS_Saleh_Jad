@@ -41,26 +41,24 @@
   position: relative;
   height: 180vh;
   z-index: 1;
-  animation: 2.6s appear;
+  animation: 2s appear;
 
 }
-
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @include header;
 
 @include main;
 
 @include footer;
 
-@keyframes appear{
-  0%{
-    opacity: 0;
-  }
 
-  90%{
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
