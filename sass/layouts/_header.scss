@@ -1,14 +1,19 @@
 @mixin header {
   header {
-    background-color: red;
     grid-area: bloc-header;
+    background-color: whitesmoke;
     .header_content {
       display: flex;
+      margin: 30px;
       & img {
         width: 150px;
         height: auto;
         display: block;
         margin: auto;
+      }
+      i {
+        font-size: 30px;
+        color: black;
       }
     }
   }

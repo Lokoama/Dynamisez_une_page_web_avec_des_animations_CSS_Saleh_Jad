@@ -1,14 +1,35 @@
 @mixin footer {
   footer.footer {
-    background-color: aqua;
     grid-area: bloc-footer;
+    background-color: #353535;
+    color: white;
+    p {
+      color: white;
+    }
   }
   div.link a {
     display: flex;
     flex-direction: row;
+    color: inherit;
     i {
       margin-right: 8px;
       width: 20px;
+      color: white;
     }
+  }
+}
+
+footer{
+  padding-left: 15px;
+  h2 {
+  padding-bottom: 5px;
+  font-size: 20px;
+  }
+  a {
+      padding-bottom: 5px;
+  }
+  p {
+      padding-bottom: 5px;
+
   }
 }

@@ -1,8 +1,8 @@
 @import "./utils/variables";
+@import "./base/base";
 @import "./utils/fonctions";
 @import "./utils/mixins";
 @import "./utils/placeholders";
-@import "./base/base";
 @import "./base/typography";
 @import "./composants/bouttons";
 @import "./layouts/header";
@@ -13,14 +13,13 @@
 @import "./pages/about";
 @import "./pages/project";
 
-/* animation spinner*/
+// animation spinner
 #container1 {
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
-  animation: 5ms disapear;
   section.bloc1 {
       position: relative;
       top: 50%;
@@ -30,26 +29,25 @@
 }
 
 #container2 {
-  border: solid $color-primary;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 15fr 2fr;
+  grid-template-rows: 2fr 14fr 2fr;
   grid-template-areas:
     "bloc-header"
     "bloc-main"
     "bloc-footer";
   position: relative;
-  height: 180vh;
-  z-index: 1;
-  animation: 2s appear;
-
+  height: 100vh;
+  z-index: 100;
+  animation: 2.5s appear;
+  
 }
 @keyframes appear{
   0%{
-    opacity: 0;
+    opacity: 0.6;
   }
-  90%{
-    opacity: 0;
+  50%{
+    opacity: 0.6;
   }
   100% {
     opacity: 1;

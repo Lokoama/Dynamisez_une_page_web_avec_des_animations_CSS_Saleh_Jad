@@ -1,34 +1,37 @@
+.mainpage {
+    border-radius: 30px 30px 0 0;
+    background-color: whitesmoke;
+    margin-top: -60px;
+    position: relative;
+}
 
 img.img_page {
     height: 200px;
     width: 100%;
-    object-fit: content;
+    object-fit: cover;
   }
 div.title_page {
     display: flex;
     justify-content: space-between;
+
     i {
         margin-top: auto;
         margin-bottom: auto;
     }
 }
 
-div.card_page {
-    @include card_dimension;
-    width: 100%;
-    justify-content: space-between;
-    &:hover .animation_page{
-        width: 100px;
-        opacity: 1;
-        background-color: red;
-    }
-}
+
 div.card_txt_page {
     display: flex;
     justify-content: space-between;
 }
 
+div.card_txt_icone {
+    padding-right: 5px;
+}
+
 div.command_btn {
+    text-align: center;
     button{
         @include button
     }
@@ -36,12 +39,144 @@ div.command_btn {
 
 .card_content {
     width: 100%;
-    &:hover {
-        
+    padding: 15px 0;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_price_animation {
+    display: flex;
+    align-items: center;
+    margin: -15px 0;
+}
+
+div.card_page {
+    @include card_dimension;
+    width: 100%;
+    justify-content: space-between;
+    .animation_page {
+        //transform: rotate(-180deg);
+        transition-duration:1000ms ;
+        opacity: 0;
+        width: 0;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px 8px;
+        height: 100%;
+    }
+    &:hover .animation_page{
+        width: 40px;
+        height: 100%;
+        opacity: 1;
+        border-radius: 0px 10px 10px 0px;
+        background-color: $color-tertiary;
+        display: flex;
+        justify-content: center;
+        //transform: rotate(0);
+    }
+    .checkIcon {
+        transform: rotate(-180deg);
+        transition-duration: 0.4s;
+        margin: auto;
+    }
+    &:hover .checkIcon{
+        transform: rotate(0);
     }
 }
 
-.animation_page {
-    background-color: green;
-    width: 0;
+
+
+.checkIcon {
+    background-color: white;
+    border-radius: 100px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    i {
+        color: $color-tertiary;
+    }
 }
+
+
+
+/*animation apparition menu*/
+div.item1 {
+    animation: menuApparition 1000ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+div.item2 {
+    animation: menuApparition 1500ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+div.item3 {
+    animation: menuApparition 2000ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+div.item4 {
+    animation: menuApparition 2500ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+div.item5 {
+    animation: menuApparition 3000ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+div.item6 {
+    animation: menuApparition 3500ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+div.item7 {
+    animation: menuApparition 4000ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+div.item8 {
+    animation: menuApparition 4500ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+div.item9 {
+    animation: menuApparition 5000ms;
+    transform: translateY(0px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuApparition{
+    0% {
+        
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card_title-page {
+    padding-left: 15px;
+}
+
+.btn_page {
+    padding-bottom: 20px;
+}
+

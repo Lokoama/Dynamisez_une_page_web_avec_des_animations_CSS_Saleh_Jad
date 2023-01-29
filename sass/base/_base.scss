@@ -1,5 +1,6 @@
 h2,
 h3,
+h4,
 p {
   padding: 0;
   margin: 0;
@@ -10,6 +11,13 @@ a {
 }
 
 body {
-  max-width: 95%;
-  margin: auto;
+  margin: 0;
+}
+
+div.container2 {
+  background-color: white;
+}
+
+div.title_page, article {
+  padding: 0 15px;
 }

@@ -11,7 +11,6 @@
         animation-name: spinner;
         animation-iteration-count: infinite;
         animation-direction: linear;
-        
       }
       .spinner div:after {
         content: "";
@@ -77,6 +76,8 @@
       @keyframes spinner {
         100% {
           opacity: 0;
+          height: 0;
+          display: none;
         }
       } 
 } 
@@ -87,6 +88,7 @@
       }
       100% {
         opacity: 0;
+        height: 0;
       }
     }
 
@@ -95,6 +97,8 @@
     
 @mixin card_dimension {
   border-radius: 10px;
-  background-color: lightgrey;
+  background-color: white;
+  box-shadow: 0 10px 15px -8px rgb(0 0 0 / 59%)
 }
+
 

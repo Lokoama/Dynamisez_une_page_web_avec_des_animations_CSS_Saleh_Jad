@@ -188,7 +188,6 @@ div.command_btn button {
 }
 
 #container2 {
-  border: solid #9356DC;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 15fr 2fr;
