@@ -37,7 +37,7 @@ body {
   font-family: "roboto", "sans-serif";
 }
 
-h1, h2 {
+h1, .logo {
   font-family: "shrikhand", "sans-serif";
 }
 
@@ -121,7 +121,7 @@ div.command_btn button:hover {
 div.card_page {
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0 10px 15px -8px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
   width: 100%;
   justify-content: space-between;
 }
@@ -246,16 +246,12 @@ div.item9 {
 }
 
 #container1 {
-  height: 100%;
-  width: 100%;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  left: 47%;
 }
 #container1 section.bloc1 {
   position: relative;
-  top: 50%;
-  left: 50%;
 }
 #container1 section.bloc1 .spinner {
   color: #9356DC;
@@ -381,19 +377,34 @@ header .header_content i {
 main {
   grid-area: bloc-main;
 }
+main h2 {
+  font-weight: 500;
+  font-style: normal;
+}
 main div.location {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: lightgrey;
+  padding: 20px 15px;
+  background-color: #eaeaea;
   box-shadow: 3px 0px 13px 0px #000000;
+  font-weight: bold;
+}
+main div.location i {
+  margin-right: 15px;
+  font-size: 20px;
 }
 main div.reservation {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #F7F7F7;
+  background-color: white;
+  padding: 30px;
+}
+main div.reservation h2 {
+  padding: 0 40px;
+}
+main div.reservation p {
+  margin: 20px 0;
 }
 main div.reservation_btn {
   margin-top: 10px;
@@ -414,19 +425,22 @@ main div.reservation_btn button:hover {
   color: #fff;
 }
 
+aside {
+  padding: 0 15px;
+  margin-bottom: 50px;
+}
 aside h2 {
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 aside div.card_aside {
   display: flex;
   justify-content: flex-start;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 15px;
-  margin: 10px;
+  margin: 20px 0;
   position: relative;
   background-color: whitesmoke;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
 }
 aside div.card_aside .number {
   border-radius: 100%;
@@ -439,11 +453,21 @@ aside div.card_aside .number {
   align-items: center;
   margin-left: -23px;
 }
-aside div.card_aside .aside_text,
-aside div.card_aside i {
+aside div.card_aside:hover {
+  background-color: #f5edff;
+}
+aside div.card_aside:hover i {
+  color: #9356DC;
+}
+aside div.card_aside .aside_text, aside div.card_aside i {
   margin-top: auto;
   margin-bottom: auto;
   padding-left: 30px;
+  color: black;
+  font-weight: bold;
+}
+aside div.card_aside i {
+  color: grey;
 }
 
 aside.bloc2 {
@@ -452,13 +476,14 @@ aside.bloc2 {
 
 .bloc3 {
   padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #F7F7F7;
 }
 .bloc3 .card {
   position: relative;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0 10px 15px -8px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
   margin: 10px 0;
 }
 .bloc3 .card_nouveau {
@@ -483,18 +508,29 @@ aside.bloc2 {
 
 .card_txt {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  padding: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   justify-content: space-between;
+  color: black;
+}
+.card_txt .card_txt-left {
+  font-size: 16px;
 }
 .card_txt .card_txt_icone {
   position: relative;
   align-items: center;
-  padding-right: 50px;
-  margin-top: auto;
-  margin-bottom: auto;
+  padding-right: 18px;
+  margin: 10px;
+}
+.card_txt .card_txt_icone:hover .icon-hover {
+  transform: scale(1);
+  opacity: 1;
+}
+.card_txt .card_txt_icone:hover .icon-default {
+  opacity: 0;
 }
 .card_txt .card_txt_icone i {
   position: absolute;
@@ -505,23 +541,23 @@ aside.bloc2 {
 }
 .card_txt .card_txt_icone .icon-default {
   transition: opacity 0.5s, transform 0.5s;
+  color: grey;
 }
 .card_txt .card_txt_icone .icon-hover {
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
-}
-.card_txt:hover .icon-hover {
-  transform: scale(1);
-  opacity: 1;
-}
-.card_txt:hover .icon-default {
-  opacity: 0;
+  color: #9356DC;
 }
 
 footer.footer {
   grid-area: bloc-footer;
   background-color: #353535;
   color: white;
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+footer.footer h2 {
+  margin: 15px 0;
 }
 footer.footer p {
   color: white;

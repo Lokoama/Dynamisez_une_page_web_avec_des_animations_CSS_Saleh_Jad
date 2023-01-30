@@ -2,19 +2,34 @@
 @mixin main {
 main {
     grid-area: bloc-main;
+    h2 {
+      font-weight: 500;
+      font-style: normal;
+    }
     div.location {
       display: flex;
       justify-content: center;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      background-color: lightgrey;
-      box-shadow: 3px 0px 13px 0px #000000;;
+      padding : 20px 15px;
+      background-color: #eaeaea;
+      box-shadow: 3px 0px 13px 0px #000000;
+      font-weight: bold;
+      i {
+        margin-right: 15px;
+        font-size: 20px;
+      }
     }
     div.reservation {
       display: flex;
       flex-direction: column;
       text-align: center;
-      background-color: #F7F7F7;
+      background-color:white;
+      padding: 30px;
+      h2 {
+        padding: 0 40px;
+      }
+      p {
+        margin: 20px 0;
+      }
       &_btn {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -25,22 +40,21 @@ main {
     }
   }
   
-  
-  
   aside {
+    padding: 0 15px;
+    margin-bottom: 50px;
     h2 {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 30px;     
     }
     div.card_aside {
       display: flex;
       justify-content: flex-start;
-      border-radius: 30px;
+      border-radius: 20px;
       padding: 15px;
-      margin: 10px;
+      margin:20px 0;
       position: relative;
       background-color: whitesmoke;
-      box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.70);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
       .number {
         border-radius: 100%;
         background-color: $color-primary;
@@ -51,13 +65,22 @@ main {
         justify-content: space-around;
         align-items: center;
         margin-left: -23px;
-      
       }
-      .aside_text,
-      i {
+      &:hover {
+        background-color: #f5edff;
+        i {
+          color: $color-primary;
+        }
+      }
+      .aside_text,i {
         margin-top: auto;
         margin-bottom: auto;
         padding-left: 30px;
+        color: black;
+        font-weight: bold;
+      }
+      i {
+        color: grey;
       }
     }
   }
@@ -68,6 +91,7 @@ main {
   
   .bloc3 {
     padding-top: 40px;
+    padding-bottom: 40px;
     background-color: #F7F7F7;
     .card {
       position: relative;
@@ -97,37 +121,22 @@ main {
   
   .card_txt {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     justify-content: space-between;
-  
+    color: black;
+    .card_txt-left {
+      font-size: 16px;
+    }
     .card_txt_icone {
       position: relative;
       align-items: center;
-      padding-right: 50px;
-      margin-top: auto;
-      margin-bottom: auto;
-      i {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        font-size: larger;
-      }
-  
-      .icon-default {
-        transition: opacity 0.5s, transform 0.5s;
-      }
-  
-      .icon-hover {
-        transition: opacity 0.5s, transform 0.5s;
-        opacity: 0;
-      }
-    }
-  
-    &:hover {
+      padding-right: 18px;
+      margin: 10px;
+      &:hover {
       .icon-hover {
         transform:scale(1);
         opacity: 1;
@@ -136,6 +145,25 @@ main {
         opacity: 0;
       }
     }
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        font-size: larger;
+      }
+      .icon-default {
+        transition: opacity 0.5s, transform 0.5s;
+        color: grey;
+      }
+      .icon-hover {
+        transition: opacity 0.5s, transform 0.5s;
+        opacity: 0;
+        color: $color-primary;
+      }
+    }
+  
+    
   }
 
 }
