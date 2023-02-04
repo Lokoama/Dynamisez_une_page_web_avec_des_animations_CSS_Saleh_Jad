@@ -10,16 +10,60 @@ img.img_page {
     width: 100%;
     object-fit: cover;
   }
+
 div.title_page {
     display: flex;
     justify-content: space-between;
+    .card_txt_icone {
+        position: relative;
+        align-items: center;
+        padding-right: 20px;
+        margin: 10px;
+        display: flex;
+        &:hover {
+        .icon-hover {
+          transform:scale(1);
+          opacity: 1;
+        }
+        .icon-default {
+          opacity: 0;
+        }
+      }
+        i {
+          position: absolute;
+          display: block;
+          font-size: larger;
+        }
+        .icon-default {
+          transition: opacity 0.5s, transform 0.5s;
+          color: grey;
+        }
+        .icon-hover {
+          transition: opacity 0.5s, transform 0.5s;
+          opacity: 0;
+          color: $color-primary;
+        }
+      }
+    
+      
+    }
+  
+  
 
-    i {
-        margin-top: auto;
-        margin-bottom: auto;
+.title_menu {
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 400;
+    &:after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background-color: $color-tertiary;
+    bottom: 0%;
+    left: 0%;
     }
 }
-
 
 div.card_txt_page {
     display: flex;

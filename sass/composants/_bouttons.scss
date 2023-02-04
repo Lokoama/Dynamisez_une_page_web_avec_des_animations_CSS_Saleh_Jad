@@ -1,5 +1,7 @@
 @mixin button {
     background: $color-secondary;
+    background-image: linear-gradient($color-primary, $color-secondary);
+    box-shadow: 5px 5px grey;
     border-radius: 30px;
     border-color: $color-secondary;
     color: #fff;

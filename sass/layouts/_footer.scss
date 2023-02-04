@@ -5,13 +5,23 @@
     color: white;
     font-size: 15px;
     padding-bottom: 15px;
+    padding-left: 15px;
     h2 {
-      margin: 15px 0; 
+      margin: 15px 0;
+      padding-bottom: 5px;
+      font-size: 20px;
+    }
+    a {
+      padding-bottom: 5px;
     }
     p {
+      padding-bottom: 5px;
       color: white;
     }
-  }
+  } 
+}
+
+
   div.link a {
     display: flex;
     flex-direction: row;
@@ -22,19 +32,10 @@
       color: white;
     }
   }
-}
+
 
 footer{
-  padding-left: 15px;
-  h2 {
-  padding-bottom: 5px;
-  font-size: 20px;
-  }
-  a {
-      padding-bottom: 5px;
-  }
-  p {
-      padding-bottom: 5px;
 
-  }
+
+  
 }
