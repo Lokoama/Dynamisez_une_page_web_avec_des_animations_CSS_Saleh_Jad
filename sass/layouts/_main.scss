@@ -3,7 +3,7 @@
 main {
     grid-area: bloc-main;
     h2 {
-      font-weight: 500;
+      font-weight: 600;
       font-style: normal;
     }
     div.location {
@@ -46,6 +46,7 @@ main {
     h2 {
       padding-top: 30px;     
     }
+  
     div.card_aside {
       display: flex;
       justify-content: flex-start;
@@ -136,6 +137,7 @@ main {
       align-items: center;
       padding-right: 18px;
       margin: 10px;
+      font-size: 20px;
       &:hover {
       .icon-hover {
         transform:scale(1);

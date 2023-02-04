@@ -6,7 +6,7 @@
 }
 
 img.img_page {
-    height: 200px;
+    height: 250px;
     width: 100%;
     object-fit: cover;
   }
@@ -14,12 +14,16 @@ img.img_page {
 div.title_page {
     display: flex;
     justify-content: space-between;
+    h1 {
+        font-size: 20px;
+    }
     .card_txt_icone {
         position: relative;
         align-items: center;
         padding-right: 20px;
         margin: 10px;
         display: flex;
+        font-size: 15px;
         &:hover {
         .icon-hover {
           transform:scale(1);
@@ -72,6 +76,7 @@ div.card_txt_page {
 
 div.card_txt_icone {
     padding-right: 5px;
+    font-weight:600;
 }
 
 div.command_btn {
@@ -152,7 +157,7 @@ div.item1 {
     transform: translateY(0px);
     opacity: 0;
     animation-fill-mode: forwards;
-}
+}h4
 
 div.item2 {
     animation: menuApparition 1500ms;

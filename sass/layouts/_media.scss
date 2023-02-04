@@ -1,9 +1,6 @@
 //Dimensiosn tablette
 @media all and (min-width: 801px) {
 //Pour l'index 
-body {
-    color: green;
-}
 
 div.aside {
     text-align: center;
@@ -27,7 +24,7 @@ article.bloc3 {
 
 //pour les pages
 img.img_page {
-    height: 300px;
+    height: 350px;
 }
 
 div.btn_page {
@@ -62,10 +59,6 @@ footer.footer {
 
 //dimension desktop
 @media all and (min-width: 1405px) {
-    body {
-        color: red;
-    }
-
     div.aside {
         h2 {
             padding-bottom: 30px;
@@ -99,6 +92,9 @@ footer.footer {
         margin-bottom: 0;
     }
 
+    .fonctionnement {
+        display: flex;
+      }
     //pour les pages
 
     img.img_page {
