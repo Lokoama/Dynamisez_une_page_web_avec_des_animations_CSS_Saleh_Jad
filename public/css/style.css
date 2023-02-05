@@ -20,10 +20,6 @@ div.container2 {
   background-color: white;
 }
 
-div.title_page, article {
-  padding: 0 15px;
-}
-
 @keyframes disapear {
   0% {
     opacity: 1;
@@ -169,8 +165,15 @@ div.card_page {
   width: 100%;
   justify-content: space-between;
 }
+div.card_page h3, div.card_page p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 270px;
+  transition-duration: 500ms;
+}
 div.card_page .animation_page {
-  transition-duration: 1000ms;
+  transition-duration: 500ms;
   opacity: 0;
   width: 0;
   font-weight: 700;
@@ -180,6 +183,11 @@ div.card_page .animation_page {
   padding: 0px 8px;
   height: 100%;
 }
+div.card_page:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+  transition: background-color 300ms ease-in-out;
+}
 div.card_page:hover .animation_page {
   width: 40px;
   height: 100%;
@@ -188,6 +196,13 @@ div.card_page:hover .animation_page {
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
+}
+div.card_page:hover h3, div.card_page:hover p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  animation-name: hover;
 }
 div.card_page .checkIcon {
   transform: rotate(-180deg);
@@ -217,7 +232,7 @@ div.item1 {
   animation-fill-mode: forwards;
 }
 
-h4 div.item2 {
+div.item2 {
   animation: menuApparition 1500ms;
   transform: translateY(0px);
   opacity: 0;
@@ -287,6 +302,11 @@ div.item9 {
 
 .btn_page {
   padding-bottom: 20px;
+}
+
+.article_page, div.title_page {
+  width: 95%;
+  margin: 0 auto;
 }
 
 @media all and (min-width: 801px) {

@@ -47,9 +47,7 @@ div.title_page {
           opacity: 0;
           color: $color-primary;
         }
-      }
-    
-      
+      } 
     }
   
   
@@ -104,9 +102,16 @@ div.card_page {
     @include card_dimension;
     width: 100%;
     justify-content: space-between;
+    h3, p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 270px;
+        transition-duration: 500ms;
+    }
     .animation_page {
         //transform: rotate(-180deg);
-        transition-duration:1000ms ;
+        transition-duration:500ms ;
         opacity: 0;
         width: 0;
         font-weight: 700;
@@ -115,6 +120,11 @@ div.card_page {
         align-items: center;
         padding: 0px 8px;
         height: 100%;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: #f3f3f3;
+        transition: background-color 300ms ease-in-out;
     }
     &:hover .animation_page{
         width: 40px;
@@ -126,6 +136,14 @@ div.card_page {
         justify-content: center;
         //transform: rotate(0);
     }
+    &:hover h3, &:hover p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 200px;   
+        animation-name: hover;
+       
+     }
     .checkIcon {
         transform: rotate(-180deg);
         transition-duration: 0.4s;
@@ -157,7 +175,7 @@ div.item1 {
     transform: translateY(0px);
     opacity: 0;
     animation-fill-mode: forwards;
-}h4
+}
 
 div.item2 {
     animation: menuApparition 1500ms;
@@ -227,5 +245,10 @@ div.item9 {
 
 .btn_page {
     padding-bottom: 20px;
+}
+
+.article_page, div.title_page {
+    width:95%;
+    margin: 0 auto;
 }
 
