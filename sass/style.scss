@@ -8,9 +8,7 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/main";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
+@import "./pages/pages";
 @import "./layouts/media";
 
 // animation spinner
@@ -35,7 +33,7 @@
   position: relative;
   height: 100vh;
   z-index: 100;
-  animation: 2.5s appear;
+  animation: 3.3s appear;
 }
 
 @keyframes appear{

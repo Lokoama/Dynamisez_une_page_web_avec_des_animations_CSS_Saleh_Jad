@@ -139,6 +139,9 @@ div.command_btn button {
   font-size: 17px;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
 }
+div.command_btn button a {
+  color: white;
+}
 div.command_btn button:hover {
   filter: brightness(85%);
   color: #fff;
@@ -419,7 +422,7 @@ div.item9 {
   left: 17px;
   width: 6px;
   height: 18px;
-  border-radius: 25%;
+  border-radius: 100%;
   background: #9356DC;
   animation: 5ms disapear;
 }
@@ -487,7 +490,7 @@ div.item9 {
   position: relative;
   height: 100vh;
   z-index: 100;
-  animation: 2.5s appear;
+  animation: 3.3s appear;
 }
 
 @keyframes appear {
@@ -569,6 +572,9 @@ main div.reservation_btn button {
   cursor: pointer;
   font-size: 17px;
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
+}
+main div.reservation_btn button a {
+  color: white;
 }
 main div.reservation_btn button:hover {
   filter: brightness(85%);
