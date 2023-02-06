@@ -10,7 +10,7 @@
         animation-duration: 2.2s;
         animation-name: spinner;
         animation-iteration-count: infinite;
-        animation-direction: linear;
+        animation-direction:normal;
       }
       .spinner div:after {
         content: "";
@@ -18,7 +18,7 @@
         position: absolute;
         top: 10px;
         left: 17px;
-        width: 6px;
+        width: 15px;
         height: 18px;
         border-radius:100%;
         background: $color-primary;
@@ -82,19 +82,15 @@
       } 
 } 
 
-    @keyframes disapear {
-      0% {
-        opacity: 1;
+@keyframes disapear {
+  0% {
+     opacity: 1;
       }
-      100% {
-        opacity: 0;
-      
+  100% {
+      opacity: 0;
       }
-    }
+}
 
-    
-    
-    
 @mixin card_dimension {
   border-radius: 10px;
   background-color: white;
